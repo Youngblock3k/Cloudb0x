@@ -152,9 +152,15 @@
         /* Grid Section */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-bottom: 60px;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Store Item Card */
@@ -338,7 +344,7 @@
 
         <!-- Welcome Message -->
         <div class="welcome-text">
-            Welcome to the official store of CloudBox! Here, you can purchase exclusive items, ranks, and other perks to enhance your experience on our server. Your support helps us maintain and improve the server, ensuring a great experience for all players. Thank you for being part of our community! (Server IP: play.cloudbox.net)
+            Hey there, player! 👋 Welcome to our CloudBox store - your one-stop shop for awesome gear, ranks, and everything you need to level up your experience. We put a lot of effort into keeping our server running smoothly, and every purchase really helps us out. Thanks for being an awesome part of our community! Need help? Hit us up on Discord or check out play.cloudbox.net
         </div>
 
         <!-- Store Items Grid -->
@@ -348,7 +354,7 @@
                 <div class="item-title">RANKS</div>
                 <div class="item-icon">👑</div>
                 <div class="item-description">
-                    Upgrade your status with exclusive ranks. Get special perks, commands, and recognition.
+                    Stand out with exclusive ranks! Get cool perks, special commands, and show off your status. Plus, you'll help support the server!
                 </div>
             </div>
 
@@ -357,7 +363,7 @@
                 <div class="item-title">COINS</div>
                 <div class="item-icon">💰</div>
                 <div class="item-description">
-                    Earn in-game currency. Use coins to purchase items and upgrades from the shop.
+                    Grab some in-game currency to spend on whatever you want. Stock up and unlock tons of cool stuff from our shop!
                 </div>
             </div>
 
@@ -366,37 +372,21 @@
                 <div class="item-title">KEYS</div>
                 <div class="item-icon">🔑</div>
                 <div class="item-description">
-                    Unlock special crates and exclusive rewards. Each key opens limitless possibilities.
+                    Open mystery crates and score epic rewards! Who knows what amazing stuff you'll get? The possibilities are endless!
                 </div>
             </div>
 
-            <!-- Other -->
+            <!-- Cosmetics -->
             <div class="store-item">
-                <div class="item-title">OTHER</div>
-                <div class="item-icon">⬜</div>
+                <div class="item-title">COSMETICS</div>
+                <div class="item-icon">✨</div>
                 <div class="item-description">
-                    Miscellaneous items and special bundles. Check out our unique offerings.
+                    Make your character look sick with awesome skins, particles, and effects. Express yourself and stand out!
                 </div>
             </div>
         </div>
 
-        <!-- Modules Section -->
-        <div class="section-title">MODULES</div>
-        <div class="info-box">
-            You can configure your store experience by managing your settings and preferences.
-        </div>
 
-        <!-- Top Supporter Section -->
-        <div class="section-title">TOP SUPPORTER</div>
-        <div class="empty-state">
-            No recent top supporter to display.
-        </div>
-
-        <!-- Recent Transactions Section -->
-        <div class="section-title">RECENT TRANSACTIONS</div>
-        <div class="empty-state">
-            No recent transactions to display.
-        </div>
 
         <!-- Footer -->
         <div class="footer">
@@ -416,12 +406,12 @@
             item.addEventListener('click', function() {
                 this.style.transform = 'scale(0.95)';
                 setTimeout(() => {
-                    this.style.transform = '';
-                }, 100);
-            });
-        });
-
-        // Add hover sound effect simulation
+                 Made with ❤️ by the CloudBox Team</div>
+            <div style="margin-top: 10px; font-size: 11px;">© 2026 CloudBox • Questions? Join our Discord! 🎮</div>
+            <div class="footer-links">
+                <a href="#">Discord Server</a>
+                <a href="#">Rules & FAQ</a>
+                <a href="#">Supportimulation
         document.querySelectorAll('.header-btn, .store-item').forEach(el => {
             el.addEventListener('mouseenter', function() {
                 // Visual feedback is handled by CSS
